@@ -14,8 +14,8 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
       <Route index element={<Home />} />
-      <Route path="crud-mysql" element={<CrudMysql />} />
-      <Route path="crud-mongodb" element={<CrudMongodb />} />
+      <Route path="mysql" element={<CrudMysql />} />
+      <Route path="mongodb" element={<CrudMongodb />} />
     </Route>
   )
 );
