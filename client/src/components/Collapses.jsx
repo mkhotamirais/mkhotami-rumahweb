@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 const navMenus = [
   { href: "", text: "home" },
-  { href: "mysql", text: "mysql" },
+  // { href: "mysql", text: "mysql" },
   { href: "mongodb", text: "mongodb" },
 ];
 

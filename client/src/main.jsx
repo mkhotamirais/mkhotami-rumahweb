@@ -7,14 +7,14 @@ import { Provider } from "react-redux";
 import { store } from "./app/store.js";
 import ErrorBoundary from "./ErrorBoundary.jsx";
 import Home from "./pages/Home.jsx";
-import CrudMysql from "./pages/crudMysql/CrudMysql.jsx";
+// import CrudMysql from "./pages/crudMysql/CrudMysql.jsx";
 import CrudMongodb from "./pages/crudMongodb/CrudMongodb.jsx";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<App />} errorElement={<ErrorBoundary />}>
       <Route index element={<Home />} />
-      <Route path="mysql" element={<CrudMysql />} />
+      {/* <Route path="mysql" element={<CrudMysql />} /> */}
       <Route path="mongodb" element={<CrudMongodb />} />
     </Route>
   )

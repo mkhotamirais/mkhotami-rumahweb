@@ -5,6 +5,10 @@ export const userApiSlice = apiSlice.injectEndpoints({
     getUsers: builder.query({
       query: () => ({ url: `/user` }),
       transformResponse: (res) => res.data,
+      transformErrorResponse: (err) => {
+        if (err.status === "FETCH_ERROR") return err.error;
+        return err;
+      },
       providesTags: ["User"],
       keepUnusedDataFor: 5,
     }),

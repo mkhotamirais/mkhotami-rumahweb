@@ -7,13 +7,12 @@ const User = () => {
 
   let content;
   if (isLoading) content = <div>loading</div>;
-  else if (isError) content = <div>{error}</div>;
   else if (isSuccess) {
     if (data.length > 0) {
       const renderedUser = data && data.map((item) => <UserItems key={item?.id} item={item} />);
       content = renderedUser;
     } else content = <div>data kosong</div>;
-  }
+  } else if (isError) content = <div>{error || error.error}</div>;
 
   return (
     <div>
